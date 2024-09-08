@@ -1,0 +1,92 @@
+:root{
+   --box-width:30px;
+}
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{ 
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    width: 500px;
+    height: 600px;
+    box-shadow: 0px 0px 10px red,
+                    0px 0px 10px yellow
+                    ,0px 0px 100px gold;
+}
+.text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 16.67%;
+    background-color: aqua;
+    background-image: url("./images/blackjack-border-main.png");
+    background-size: 100% 100%;
+    color:gold;
+    font-size: 4rem;
+
+}
+.content
+{
+    width: 100%;
+    height:83.3%;
+    display: grid;
+    grid-template-columns:repeat(3,minmax(162px,1fr));
+    grid-column-gap:1px;
+    grid-template-rows: repeat(3,minmax(162px,1fr));
+    grid-row-gap: 1px;
+    background-color: aquamarine;
+    border:1px solid white;
+}
+.box
+{
+   background-image:url("./images/blackjack-border.png") ;
+   background-size: 100% 100%;
+   position: relative;
+}
+.icon
+{
+   position: absolute;
+    top: 50%;
+    width: 110px;
+    aspect-ratio: 1/1;
+    left: 50%;
+    display: none;
+   transform: translate(-50%, -50%);
+    
+}
+.animation_pack
+{
+    animation-name: icon;
+    animation-duration: 80ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.icon_image
+{
+    width: 100%;
+    user-select: none;
+    height: 100%;
+}
+@keyframes icon
+{
+   0%
+   {
+     transform: translate(-50%,-50%)  scale(0) ;
+   }    
+   100%
+   {
+      transform: translate(-50%, -50%) scale(1) ;
+   }
+}
